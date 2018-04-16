@@ -15,7 +15,7 @@ paths:
   /firebasecustomers:
     x-summary: Get/creates prestashop consumer from firebase user
     get:
-      summary: Gets/creates prestashop consumer from firebase user
+      summary: /firebasecustomers
       parameters:
         - name: Authorization
           in: header
@@ -36,7 +36,7 @@ paths:
   /swipioproducts:
     x-summary: Gets swipio products
     get:
-      summary: Gets swipio products
+      summary: /swipioproducts
       parameters:
         - name: Authorization
           in: header
@@ -64,7 +64,7 @@ paths:
   /swipioproductsexpanded:
     x-summary: Gets swipio products expanded inline
     get:
-      summary: Gets swipio products expanded inline
+      summary: /swipioproductsexpanded
       parameters:
         - name: Authorization
           in: header
@@ -104,7 +104,7 @@ paths:
   /swipioproductexpanded:
     x-summary: Gets swipio product expanded inline
     get:
-      summary: Gets swipio product expanded inline
+      summary: /swipioproductexpanded
       parameters:
         - name: Authorization
           in: header
@@ -141,3 +141,67 @@ paths:
                   type: string
                 options:
                   type: object
+  /swipiocategories:
+    x-summary: Gets swipio categories for customer
+    get:
+      summary: /swipiocategories
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: cid
+          in: query
+          type: integer
+          required: true
+          description: customer id to get categories for
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                xref:
+                  type: string
+                favorite:
+                  type: integer
+                  enum: [0, 1]
+  /swipiocategoriesexpanded:
+    x-summary: Gets swipio categories for customer, expanded inline
+    get:
+      summary: /swipiocategoriesexpanded
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: cid
+          in: query
+          type: integer
+          required: true
+          description: customer id to get categories for
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                xref:
+                  type: string
+                favorite:
+                  type: integer
+                  enum: [0, 1]
+                name:
+                  type: string
