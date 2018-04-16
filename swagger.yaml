@@ -1,0 +1,35 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: "Swipio"
+  description: performs swipio customers, products and categories management
+host: zizit.lt
+basePath: /zipkis/api
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/xml
+paths:
+  /firebasecustomers:
+    x-summary: Get/creates prestashop consumer from firebase user
+    get:
+      summary: Gets/creates prestashop consumer from firebase user
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: uid
+          in: query
+          type: string
+          required: true
+          description: Firebase user id
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: integer
