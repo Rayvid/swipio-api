@@ -33,3 +33,31 @@ paths:
           description: Successful Response
           schema:
             type: integer
+  /swipioproducts:
+    x-summary: Gets swipio products
+    get:
+      summary: Gets swipio products
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: limit
+          in: query
+          type: string
+          required: false
+          description: y,x|x where x - number of records, y - starting record
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                xref:
+                  type: string
