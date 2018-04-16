@@ -61,3 +61,83 @@ paths:
                   type: integer
                 xref:
                   type: string
+  /swipioproductsexpanded:
+    x-summary: Gets swipio products expanded inline
+    get:
+      summary: Gets swipio products expanded inline
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: limit
+          in: query
+          type: string
+          required: false
+          description: y,x|x where x - number of records, y - starting record
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                orig_price:
+                  type: number
+                price:
+                  type: number
+                images:
+                  type: object
+                summary:
+                  type: string
+                description:
+                  type: string
+                options:
+                  type: object
+  /swipioproductexpanded:
+    x-summary: Gets swipio product expanded inline
+    get:
+      summary: Gets swipio product expanded inline
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: pid
+          in: query
+          type: integer
+          required: true
+          description: product id
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                orig_price:
+                  type: number
+                price:
+                  type: number
+                images:
+                  type: object
+                summary:
+                  type: string
+                description:
+                  type: string
+                options:
+                  type: object
