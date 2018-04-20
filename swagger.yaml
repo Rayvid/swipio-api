@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: '1.0'
   title: "Swipio"
-  description: performs swipio customers, products and categories management
+  description: Performs swipio customers, products and categories management
 host: zizit.lt
 basePath: /zipkis/api
 schemes:
