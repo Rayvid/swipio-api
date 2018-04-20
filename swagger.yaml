@@ -13,7 +13,7 @@ produces:
 - application/xml
 paths:
   /firebasecustomers:
-    x-summary: Get/creates prestashop consumer from firebase user
+    x-summary: Gets/creates prestashop consumer from firebase user
     get:
       summary: /firebasecustomers
       parameters:
