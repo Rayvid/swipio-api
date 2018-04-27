@@ -204,7 +204,7 @@ paths:
                 name:
                   type: string
   /swipiocategory/favorite:
-    x-summary: favorites swipeio category
+    x-summary: favorites swipio category
     get:
       summary: /swipiocategory/favorite
       parameters:
@@ -228,7 +228,7 @@ paths:
         200:
           description: Successful Response
   /swipiocategory/unfavorite:
-    x-summary: unfavorites swipeio category
+    x-summary: unfavorites Swipio category
     get:
       summary: /swipiocategory/unfavorite
       parameters:
