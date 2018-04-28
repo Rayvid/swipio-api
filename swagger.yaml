@@ -33,6 +33,24 @@ paths:
           description: Successful Response
           schema:
             type: integer
+  /countriesandstatesexpanded:
+    x-summary: Gets prestashop countries and states in expanded format
+    get:
+      summary: /countriesandstatesexpanded
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              type: object
   /swipioproducts:
     x-summary: Gets swipio products
     get:
