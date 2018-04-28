@@ -172,6 +172,42 @@ paths:
                 favorite:
                   type: integer
                   enum: [0, 1]
+  /swipiocategoriesbulkupdate:
+    x-summary: Bulk updates swipio categories for customer
+    get:
+      summary: /swipiocategoriesbulkupdate
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: cid
+          in: query
+          type: integer
+          required: true
+          description: customer id to update categories for
+        - name: fav_cat_ids
+          in: query
+          type: string
+          required: true
+          description: id1,id2,id3,... where id[x] is category id to make favorite. Other categories for this customer will become non favorite
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                xref:
+                  type: string
+                favorite:
+                  type: integer
+                  enum: [0, 1]
   /swipiocategoriesexpanded:
     x-summary: Gets swipio categories for customer, expanded inline
     get:
@@ -204,7 +240,7 @@ paths:
                 name:
                   type: string
   /swipiocategory/favorite:
-    x-summary: favorites swipio category
+    x-summary: Favorite Swipio category
     get:
       summary: /swipiocategory/favorite
       parameters:
@@ -228,7 +264,7 @@ paths:
         200:
           description: Successful Response
   /swipiocategory/unfavorite:
-    x-summary: unfavorites Swipio category
+    x-summary: Unfavorite Swipio category
     get:
       summary: /swipiocategory/unfavorite
       parameters:
