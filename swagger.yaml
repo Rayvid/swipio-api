@@ -51,6 +51,20 @@ paths:
             type: array
             items:
               type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                states:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      name:
+                        type: string
   /swipioproducts:
     x-summary: Gets swipio products
     get:
