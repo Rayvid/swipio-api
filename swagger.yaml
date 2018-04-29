@@ -254,7 +254,7 @@ paths:
         - name: cid
           in: query
           type: integer
-          required: true
+          required: false
           description: customer id to get categories for
       responses:
         200:
