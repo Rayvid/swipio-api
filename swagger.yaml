@@ -319,3 +319,32 @@ paths:
       responses:
         200:
           description: Successful Response
+  /swipioemail:
+    x-summary: Send swipio themed email
+    get:
+      summary: /swipioemail
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: to
+          in: query
+          type: string
+          required: true
+          description: email receiver
+        - name: subject
+          in: query
+          type: string
+          required: true
+          description: email subject
+        - name: body
+          in: query
+          type: string
+          required: true
+          description: email body - \n new line
+      responses:
+        200:
+          description: Successful Response
