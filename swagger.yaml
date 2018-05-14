@@ -348,3 +348,38 @@ paths:
       responses:
         200:
           description: Successful Response
+  /swipiocart:
+    x-summary: Gets/autocreates prestashop cart from firebase user
+    get:
+      summary: /swipiocart
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: cid
+          in: query
+          type: integer
+          required: true
+          description: customer id to get cart for
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              items:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    pid:
+                      type: integer
+                    cmbid:
+                      type: integer
+                    quantity:
+                      type: integer
