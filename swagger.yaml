@@ -534,7 +534,7 @@ paths:
           in: query
           type: integer
           required: true
-          description: quantity
+          description: quantity, can be negative
       responses:
         200:
           description: Successful Response
