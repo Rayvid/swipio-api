@@ -378,7 +378,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    pid:
+                    id:
                       type: integer
                     cmbid:
                       type: integer
@@ -413,7 +413,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    pid:
+                    id:
                       type: integer
                     cmbid:
                       type: integer
@@ -448,7 +448,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    pid:
+                    id:
                       type: integer
                     cmbid:
                       type: integer
@@ -498,7 +498,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    pid:
+                    id:
                       type: integer
                     cmbid:
                       type: integer
@@ -548,7 +548,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    pid:
+                    id:
                       type: integer
                     cmbid:
                       type: integer
@@ -593,7 +593,7 @@ paths:
                 items:
                   type: object
                   properties:
-                    pid:
+                    id:
                       type: integer
                     cmbid:
                       type: integer
