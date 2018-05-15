@@ -403,3 +403,22 @@ paths:
       responses:
         200:
           description: Successful Response
+  /swipiocart/pay:
+    x-summary: Marks as paid and destroys prestashop cart for firebase user
+    get:
+      summary: /swipiocart/pay
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: cid
+          in: query
+          type: integer
+          required: true
+          description: customer id to destroy cart for
+      responses:
+        200:
+          description: Successful Response
