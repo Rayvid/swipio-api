@@ -403,6 +403,22 @@ paths:
       responses:
         200:
           description: Successful Response
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              items:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    pid:
+                      type: integer
+                    cmbid:
+                      type: integer
+                    quantity:
+                      type: integer
   /swipiocart/pay:
     x-summary: Marks as paid and destroys prestashop cart for firebase user
     get:
@@ -422,6 +438,22 @@ paths:
       responses:
         200:
           description: Successful Response
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              items:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    pid:
+                      type: integer
+                    cmbid:
+                      type: integer
+                    quantity:
+                      type: integer
   /swipiocart/add:
     x-summary: Adds product to cart
     get:
@@ -456,3 +488,69 @@ paths:
       responses:
         200:
           description: Successful Response
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              items:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    pid:
+                      type: integer
+                    cmbid:
+                      type: integer
+                    quantity:
+                      type: integer
+  /swipiocart/udpate:
+    x-summary: Adds/updates product to cart
+    get:
+      summary: /swipiocart/update
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: cid
+          in: query
+          type: integer
+          required: true
+          description: customer id to add product for
+        - name: pid
+          in: query
+          type: integer
+          required: true
+          description: product id
+        - name: cmbid
+          in: query
+          type: integer
+          required: false
+          description: combination id - if project has combinations
+        - name: quantity
+          in: query
+          type: integer
+          required: true
+          description: quantity
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              items:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    pid:
+                      type: integer
+                    cmbid:
+                      type: integer
+                    quantity:
+                      type: integer
