@@ -439,7 +439,7 @@ paths:
           in: query
           type: integer
           required: true
-          description: customer address id to deliver order
+          description: customer address id to deliver order to
       responses:
         200:
           description: Successful Response
