@@ -435,6 +435,11 @@ paths:
           type: integer
           required: true
           description: customer id to pay cart for
+        - name: addressid
+          in: query
+          type: integer
+          required: true
+          description: customer address id to deliver order
       responses:
         200:
           description: Successful Response
