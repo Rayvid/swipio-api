@@ -633,3 +633,49 @@ paths:
                       type: integer
                     quantity:
                       type: integer
+  /swipiocart/discountcode:
+    x-summary: Adds discount code to cart
+    get:
+      summary: /swipiocart/discountcode
+      parameters:
+        - name: Authorization
+          in: header
+          description: an authorization header
+          required: true
+          type: string
+          default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: cid
+          in: query
+          type: integer
+          required: true
+          description: customer id to add product for
+        - name: code
+          in: query
+          type: string
+          required: true
+          description: discount code in prestashop
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              cost:
+                type: number
+              discount:
+                type: number
+              total:
+                type: number
+              items:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    cmbid:
+                      type: integer
+                    quantity:
+                      type: integer
