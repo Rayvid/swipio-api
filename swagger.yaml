@@ -348,7 +348,6 @@ paths:
       responses:
         200:
           description: Successful Response
-          
   /swipiocart:
     x-summary: Gets/autocreates prestashop cart from firebase user
     get:
@@ -373,6 +372,12 @@ paths:
             properties:
               id:
                 type: integer
+              cost:
+                type: number
+              discount:
+                type: number
+              total:
+                type: number
               items:
                 type: array
                 items:
@@ -408,6 +413,12 @@ paths:
             properties:
               id:
                 type: integer
+              cost:
+                type: number
+              discount:
+                type: number
+              total:
+                type: number
               items:
                 type: array
                 items:
@@ -498,6 +509,12 @@ paths:
             properties:
               id:
                 type: integer
+              cost:
+                type: number
+              discount:
+                type: number
+              total:
+                type: number
               items:
                 type: array
                 items:
@@ -548,6 +565,12 @@ paths:
             properties:
               id:
                 type: integer
+              cost:
+                type: number
+              discount:
+                type: number
+              total:
+                type: number
               items:
                 type: array
                 items:
@@ -593,6 +616,12 @@ paths:
             properties:
               id:
                 type: integer
+              cost:
+                type: number
+              discount:
+                type: number
+              total:
+                type: number
               items:
                 type: array
                 items:
