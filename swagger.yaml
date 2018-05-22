@@ -451,6 +451,11 @@ paths:
           type: integer
           required: true
           description: customer address id to deliver order to
+        - name: method
+          in: query
+          type: string
+          required: true
+          description: Payment method
       responses:
         200:
           description: Successful Response
