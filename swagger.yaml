@@ -130,6 +130,11 @@ paths:
           required: true
           type: string
           default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
         - name: limit
           in: query
           type: string
@@ -170,6 +175,11 @@ paths:
           required: true
           type: string
           default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
         - name: pid
           in: query
           type: integer
@@ -385,6 +395,11 @@ paths:
           required: true
           type: string
           default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
         - name: cid
           in: query
           type: integer
@@ -415,6 +430,8 @@ paths:
                       type: integer
                     quantity:
                       type: integer
+                    images:
+                      type: string
   /swipiocart/destroy:
     x-summary: Destroys prestashop cart for firebase user
     get:
@@ -426,6 +443,11 @@ paths:
           required: true
           type: string
           default: Basic UktEN0FTWEpVR1IyUlFLQThNU0hSSkRTU1FQUjFIQUw6
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
         - name: cid
           in: query
           type: integer
@@ -456,6 +478,8 @@ paths:
                       type: integer
                     quantity:
                       type: integer
+                    images:
+                      type: string
   /swipiocart/pay:
     x-summary: Marks as paid and destroys prestashop cart for firebase user
     get:
@@ -482,6 +506,11 @@ paths:
           type: string
           required: true
           description: Payment method
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
       responses:
         200:
           description: Successful Response
@@ -501,6 +530,8 @@ paths:
                       type: integer
                     quantity:
                       type: integer
+                    images:
+                      type: string
   /swipiocart/add:
     x-summary: Adds product to cart
     get:
@@ -532,6 +563,11 @@ paths:
           type: integer
           required: false
           description: quantity - 1, if not specified
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
       responses:
         200:
           description: Successful Response
@@ -557,6 +593,8 @@ paths:
                       type: integer
                     quantity:
                       type: integer
+                    images:
+                      type: string
   /swipiocart/update:
     x-summary: Adds/updates product to cart
     get:
@@ -583,6 +621,11 @@ paths:
           type: integer
           required: false
           description: combination id - if project has combinations
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
         - name: quantity
           in: query
           type: integer
@@ -613,6 +656,8 @@ paths:
                       type: integer
                     quantity:
                       type: integer
+                    images:
+                      type: string
   /swipiocart/delete:
     x-summary: Deletes product to cart
     get:
@@ -634,6 +679,11 @@ paths:
           type: integer
           required: true
           description: product id
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
         - name: cmbid
           in: query
           type: integer
@@ -664,6 +714,8 @@ paths:
                       type: integer
                     quantity:
                       type: integer
+                    images:
+                      type: string
   /swipiocart/discountcode:
     x-summary: Adds discount code to cart
     get:
@@ -680,6 +732,11 @@ paths:
           type: integer
           required: true
           description: customer id to add product for
+        - name: imageFormat
+          in: query
+          type: string
+          description: image format in output
+          required: false
         - name: code
           in: query
           type: string
@@ -710,3 +767,5 @@ paths:
                       type: integer
                     quantity:
                       type: integer
+                    images:
+                      type: string
